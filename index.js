@@ -75,24 +75,10 @@ const questions = [
         message: "What are the testing instructions for this application?"
     },
     {
-        type: "confirm",
-        name: "confirmLicense",
-        message: 'Would you like to add a license to this project?',
-        default: true
-    },
-    {
         type: "checkbox",
         name: "license",
         message: "Which license would you like to use for this application?",
-        choices: ['MIT', , 'Apache', 'GPL'],
-        when: ({confirmLicense}) =>{
-            if(confirmLicense){
-                return true
-            }
-            else{
-                return false
-            }
-        }
+        choices: ['MIT', , 'Apache', 'GPL']
     },
     {
         type: "input",
@@ -126,9 +112,9 @@ const questions = [
 
 
 // TODO: Create a function to write README file
-function writeToFile(data, data) {
+function writeToFile(fileName, data) {
     console.log(data)
-    fs.writeFile(`./${data.title}.md`, data, err => {
+    fs.writeFile(`./${fileName}`, data, err => {
         if (err) {
             console.error(err)
             return
