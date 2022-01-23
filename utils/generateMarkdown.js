@@ -1,35 +1,30 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) { // look at about function in portfolio generator
-  switch (license){
-    case 'MIT':
-    return //svg link 
-    break;
-    case 'Apache':
-    return
-    break;
-    case 'GPL':
-    return
-    break;
+function renderLicenseBadge(license) { 
+  if (license === 'MIT'){
+    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-yellow.svg)](https://opensource.org/licenses/${license})`
   }
-
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
+  else if (license === 'Apache') {
+    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-bright-green.svg)](https://opensource.org/licenses/${license})`
+  }
+  else {// may need to fix this one
+    return `[![License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license}-licenses)`
+  }
+}
+// include screenshot with fuzzypath
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
 
-  ${renderLicenseBadge(license)}
+  ${renderLicenseBadge(`${data.license}`)}
 
   # Table of Contents
   * [Project Description](#desc)
   * [Installation](#install)
   * [Usage](#usage)
   * [Contribution Guidelines](#contribution)
+  * [Licensing](#license)
   * [Testing Instructions](#testing)
   * [Contact](#contact)
   
@@ -49,16 +44,21 @@ function generateMarkdown(data) {
   ## Contribution Guidelines
   ${data.contrib}
 
+  <a name="license"></a>
+  ## Licensing
+  This app is licensed under ${data.license}. For more information, click on the badge link above.
+
   <a name="testing"></a>
   ## Testing Instructions
   ${data.test}
 
   <a name="contact"></a>
   ## Contact
-  You can find more of my work at ${data.username} on GitHub and contact me with any questions
+  You can find more of my work at [${data.username}](https://github.com/${data.username})
+  on GitHub and contact me with any questions
   at ${data.email}.
 
 `;
 }
 
-module.exports = {generateMarkdown}
+module.exports = generateMarkdown
