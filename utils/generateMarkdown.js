@@ -1,4 +1,4 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 function renderLicenseBadge(license) { 
   if (license === 'MIT'){
@@ -11,8 +11,7 @@ function renderLicenseBadge(license) {
     return `[![License: ${license}](https://img.shields.io/badge/License-${license}-blue.svg)](https://opensource.org/licenses/${license}-licenses)`
   }
 }
-// include screenshot with fuzzypath
-// TODO: Create a function to generate markdown for README
+//  Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `
   # ${data.title}
@@ -26,7 +25,7 @@ function generateMarkdown(data) {
   * [Contribution Guidelines](#contribution)
   * [Licensing](#license)
   * [Testing Instructions](#testing)
-  * [Contact](#contact)
+  * [Questions](#questions)
   
   <a name="desc"></a>
   ## Description
@@ -52,8 +51,8 @@ function generateMarkdown(data) {
   ## Testing Instructions
   ${data.test}
 
-  <a name="contact"></a>
-  ## Contact
+  <a name="questions"></a>
+  ## Questions
   You can find more of my work at [${data.username}](https://github.com/${data.username})
   on GitHub and contact me with any questions
   at ${data.email}.
