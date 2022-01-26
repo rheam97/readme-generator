@@ -75,7 +75,7 @@ const questions = [
         message: "What are the testing instructions for this application?"
     },
     {
-        type: "checkbox",
+        type: "list",
         name: "license",
         message: "Which license would you like to use for this application?",
         choices: ['MIT', , 'Apache', 'GPL']
