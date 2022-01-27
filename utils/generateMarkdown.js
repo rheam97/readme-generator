@@ -60,8 +60,4 @@ function generateMarkdown(data) {
 `;
 }
 
-<<<<<<< HEAD
-module.exports = generateMarkdown;
-=======
 module.exports = generateMarkdown
->>>>>>> develop
