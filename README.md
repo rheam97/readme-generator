@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# readme-generator
-=======
 # readme-generator
 
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -41,4 +38,3 @@
   at rheam97@gmail.com.
 
 
->>>>>>> develop
