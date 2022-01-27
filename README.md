@@ -26,11 +26,8 @@
 
   Here is a [video](https://drive.google.com/file/d/1SWrP8lN97tHMdv9QHSJKvEudCj1w0b78/view) depicting how the app is used.
   <div>
-  <iframe id="inlineFrameExample"
-      title="Inline Frame Example"
-      width="640"
-        height="480"
-      src="https://drive.google.com/file/d/1SWrP8lN97tHMdv9QHSJKvEudCj1w0b78/preview" ></iframe>
+  <iframe src="https://drive.google.com/file/d/1SWrP8lN97tHMdv9QHSJKvEudCj1w0b78/preview" width="640" height="480" >
+  </iframe>
   </div>
 
   <a name="license"></a>
